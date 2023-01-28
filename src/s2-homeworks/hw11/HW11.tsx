@@ -36,7 +36,7 @@ setValue2(newValue2)
                         <SuperRange
                             id={'hw11-single-slider'}
                             // сделать так чтоб value1 изменялось // пишет студент
-
+      value={value1} onChange={change}
                         />
                     </div>
                     <div className={s.wrapper}>
@@ -44,7 +44,7 @@ setValue2(newValue2)
                         <SuperRange
                             id={'hw11-double-slider'}
                             // сделать так чтоб value1/2 изменялось // пишет студент
-
+    value={[value1, value2]} onChange={change}
                         />
                         <span id={'hw11-value-2'} className={s.number}>{value2}</span>
                     </div>
