@@ -37,7 +37,7 @@ const HW13 = () => {
                 setCode('Код 200!')
                 setImage(success200)
             setInfo('')
-            setText(res.data.info)
+            setText(res.data.errorText)
                 // дописать
 
             })
@@ -46,18 +46,18 @@ const HW13 = () => {
  if(e.response.status === 500) {
                     setCode('ошибка 500!')
                     setImage(error500)
-                    setText(e.response.data.info)
+                    setText(e.response.data.errorText)
                     setInfo('')
 
                 }else if(e.response.status === 400){
                     setCode('Ошибка 400!')
                     setImage(error400)
-                    setText(e.response.data.info)
+                    setText(e.response.data.errorText)
                     setInfo('')
                 }else {
                     setCode('Error!')
                     setImage(errorUnknown)
-                    setText(e.response.data.info)
+                    setText(e.response.data.errorText)
                     setInfo('')
                 }
             })
