@@ -48,7 +48,7 @@ const HW13 = () => {
             })
             .catch((e) => {
                 // дописать
-              if(is.response.status){ if(e.response.status === 500) {
+              if(e.response.status){ if(e.response.status === 500) {
                     setCode(e.response.status)
                     setImage(error500)
                     setText(e.response.data.errorText)
