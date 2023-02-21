@@ -43,22 +43,16 @@ const HW13 = () => {
             })
             .catch((e) => {
                 // дописать
- if(e.response.status === 500) {
-                    setCode('ошибка 500!')
-                    setImage(error500)
+ if(e.response.status) {
+                    setCode(e.response.status)
+                    setImage(e.response.status === 500 ? error500 : e.response.status === 400 ? error400 :  '')
                     setText(e.response.data.errorText)
-                    setInfo(e.response.data.info)
-
-                }else if(e.response.status === 400){
-                    setCode('Ошибка 400!')
-                    setImage(error400)
-                    setText(e.response.data.errorText)
-                    setInfo(e.response.data.info)
+                    setInfo( e.response.data.info)
                 }else {
                     setCode('Error!')
+                    setText('Network Error')
+                    setInfo('AxiosError')
                     setImage(errorUnknown)
-                    setText(e.response.data.errorText)
-                    setInfo(e.response.data.info)
                 }
             })
     }
