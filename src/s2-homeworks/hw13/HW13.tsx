@@ -54,7 +54,7 @@ const HW13 = () => {
                     setText(e.response.data.errorText)
                     setInfo(e.response.data.info)
 
-                }else (e.response.status === 400){
+                }else {
                     setCode(e.response.status)
                     setImage(error400)
                     setText(e.response.data.errorText)
