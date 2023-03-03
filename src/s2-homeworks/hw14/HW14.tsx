@@ -37,6 +37,7 @@ const HW14 = () => {
                 // делает студент
 
                 setTechs(res.data.techs)
+            setFind(' ')
                 // сохранить пришедшие данные
 
                 //
